@@ -202,7 +202,7 @@ bool CRoadMap::ValidPoint( NodePoint nodeP )
 	if (nodeP.x < 0 ||
 		nodeP.y < 0 ||
 		nodeP.x >= static_cast<int>(m_Map.size()) ||
-		nodeP.y >= static_cast<int>(m_Map.size()) ||
+		nodeP.y >= static_cast<int>(m_Map[nodeP.x].size()) ||
 		m_Map[nodeP.x][nodeP.y].type == NodeStatusWall
 		)
 	{
@@ -229,7 +229,7 @@ void CRoadMap::PrintMap()
 {
 	for (int i = 0; i < static_cast<int>(m_Map.size()); ++i) {
 		for (int j = 0; j < static_cast<int>(m_Map[i].size()); ++j) {
-			printf_s(" %d",m_Map[i][j].type);
+			printf_s("%d",m_Map[i][j].type);
 		}
 		printf_s("\n");
 	}
