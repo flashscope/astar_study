@@ -13,11 +13,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	UINT timeEnd;
 
 	CRoadMap g;
-	g.InitializeMap(60, 22);
+	g.InitializeMap(79, 22);
 	g.MakeWall(1, 4, 8, 4);
 	g.MakeWall(1, 4, 1, 8);
-	g.MakeWall(1, 8, 7, 8);
-	g.SetStartAndEndNode(3, 2, 21, 40);
+	g.MakeWall(1, 8, 15, 8);
+	g.SetStartAndEndNode(3, 2, 21, 73);
 
 	timeStart = GetTickCount();
 	g.FindPath();
